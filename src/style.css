@@ -5,28 +5,53 @@
    ========================================================================== */
 
 :root {
-  /* Cores Oficiais */
-  --color-white: #FFFFFF;
-  --color-navy: #1A3F5D;
-  --color-navy-dark: #0F273D;
-  --color-navy-darker: #0A1B2A;
-  --color-navy-light: #24537A;
-  --color-navy-soft: #EEF4F8;
+  /* Paleta Dourada Imperial */
+  --color-gold-brilho: #FFF0B3;
+  --color-gold-luminoso: #F6E27A;
+  --color-gold-acetinado: #E5C158;
+  --color-gold-real: #D4AF37;
+  --color-gold-bronze: #AA822A;
+  --color-gold-envelhecido: #996515;
   
+  /* Gradientes Dourados Prontos */
+  --gradient-ouro-luxo: linear-gradient(135deg, #FFF0B3 0%, #E6CA65 30%, #D4AF37 60%, #AA822A 100%);
+  --gradient-btn: linear-gradient(90deg, #F6E27A 0%, #E5C158 50%, #D4AF37 100%);
+
+  /* Paleta Azul Meia-Noite Profundo */
+  --color-midnight-abyss: #040810;  /* Fundo Geral */
+  --color-midnight-card: #060D1A;   /* Superfície 1 (Cards) */
+  --color-midnight-slate: #071122;  /* Superfície 2 (Modais) */
+  --color-midnight-royal: #0E1F3D;  /* Destaque / Hover */
+  
+  /* Bordas */
+  --color-gold-hairline: rgba(212, 175, 55, 0.22);
+  --color-gold-hover: rgba(212, 175, 55, 0.50);
+
+  /* Paleta Tipografia (WCAG AA) */
+  --color-text-white: #FFFFFF;
+  --color-text-alabastro: #F1F5F9;
+  --color-text-ardosia: #CBD5E1;
+  --color-text-ardosia-claro: #94A3B8;
+  --color-text-muted: #64748B;
+  
+  /* Mantendo variáveis originais necessárias mapeadas para o novo Dark Mode */
+  --color-white: #060D1A; /* Cards usam var(--color-white), então mapeamos pro Card Dark */
+  --color-navy: #071122;
+  --color-navy-dark: #040810;
+  --color-navy-darker: #040810;
+  --color-navy-light: #0E1F3D;
+  --color-navy-soft: #0E1F3D;
   --color-gold: #D4AF37;
-  --color-gold-hover: #B89326;
-  --color-gold-light: #F8F3E6;
-  --color-gold-border: rgba(212, 175, 55, 0.4);
-  --color-gold-glow: rgba(212, 175, 55, 0.25);
+  --color-gold-light: #0E1F3D;
+  --color-gold-border: rgba(212, 175, 55, 0.22);
+  --color-gold-glow: rgba(212, 175, 55, 0.15);
   
-  --color-gray-bg: #F2F3F5;
-  --color-gray-alt: #F7F7F7;
-  --color-gray-border: #E2E6EA;
-  --color-text-main: #4A4A4A;
-  --color-text-muted: #6C757D;
-  --color-text-light: #E0E7EE;
+  --color-gray-bg: #040810;
+  --color-gray-alt: #071122;
+  --color-gray-border: rgba(212, 175, 55, 0.22);
+  --color-text-main: #F1F5F9;
   
-  /* Cores de Finalidade / Semânticas Oficiais */
+  /* Cores Funcionais */
   --color-whatsapp: #25D366;
   --color-urgencia-critica: #EF4444;
   --color-urgencia-critica-light: #F87171;
@@ -64,8 +89,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-text-main);
-  background-color: var(--color-white);
+  color: var(--color-text-alabastro);
+  background-color: var(--color-midnight-abyss);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -252,18 +277,33 @@ button, input, select, textarea {
 }
 
 .btn-primary {
-  background-color: var(--color-gold);
-  color: var(--color-white);
-  border-color: var(--color-gold);
+  background: var(--gradient-btn);
+  color: var(--color-midnight-abyss);
+  border: none;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, #D4AF37 0%, #E5C158 50%, #F6E27A 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-navy);
-  color: var(--color-white);
-  border-color: var(--color-navy);
+  color: var(--color-midnight-abyss);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(26, 63, 93, 0.3);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 .btn-outline-gold {
@@ -273,19 +313,20 @@ button, input, select, textarea {
 }
 
 .btn-outline-gold:hover {
-  background-color: var(--color-gold);
-  color: var(--color-navy-darker);
+  background: var(--gradient-btn);
+  color: var(--color-midnight-abyss);
+  border-color: transparent;
 }
 
 .btn-outline-white {
   background-color: transparent;
-  color: var(--color-white);
+  color: var(--color-text-white);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn-outline-white:hover {
-  background-color: var(--color-white);
-  color: var(--color-navy);
+  background-color: var(--color-text-white);
+  color: var(--color-midnight-abyss);
 }
 
 .btn-sm {
