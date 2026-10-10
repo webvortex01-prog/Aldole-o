@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aldo Leão Advocacia Estratégica | Tradição Jurídica Desde 1908</title>
+    
+    <!-- Metatags de SEO Obrigatórias -->
+    <meta name="description" content="Advocacia Estratégica com tradição jurídica desde 1908. Especialistas em Planejamento Patrimonial e Empresarial 4.0 via Holding Familiar, Proteção Patrimonial, Sucessão Empresarial, Direito Imobiliário, Empresarial, Civil e Relações de Consumo." />
+    <meta name="keywords" content="Dr. Aldo Leão, Advocacia Estratégica, Holding Familiar, Planejamento Patrimonial, Planejamento Empresarial, Planejamento 4.0, Sucessão Empresarial, Proteção Patrimonial, Escritório de Advocacia mais antigo do Brasil, 1908, Direito Imobiliário, Direito Empresarial, Direito Civil, Relações de Consumo, Porto Alegre, Advocacia Digital" />
+    <meta name="author" content="Aldo Leão Advocacia Estratégica" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aldoleao.adv.br/" />
+    <meta property="og:title" content="Aldo Leão Advocacia Estratégica | Tradição Jurídica Desde 1908" />
+    <meta property="og:description" content="Desde 1908, o escritório de advocacia mais antigo do Brasil unindo tradição jurídica, inovação e inteligência na proteção de legados familiares e holdings." />
+    <meta property="og:image" content="/assets/images/dr_aldo_leao.jpg" />
+
+    <!-- Favicon SVG Dourado Oficial -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231A3F5D' stroke='%23D4AF37' stroke-width='4'/%3E%3Cpath d='M30 75 L50 25 L70 75 M38 58 L62 58' stroke='%23D4AF37' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E" />
+
+    <!-- Google Fonts Premium (Tipografia Decision Theme) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+
+    <!-- Schema.org JSON-LD para SEO e Autoridade Institucional -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Aldo Leão Advocacia Estratégica",
+      "legalName": "Aldo Leão Ferreira Filho Advocacia",
+      "foundingDate": "1908",
+      "description": "Escritório de advocacia centenário fundado em 1908. Especialista em Planejamento Patrimonial 4.0 via Holding Familiar, Proteção Patrimonial, Sucessão e Direito Corporativo.",
+      "url": "https://aldoleao.adv.br/",
+      "telephone": "+55-51-998088998",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Cel. Lucas de Oliveira, 1255/502, Bairro Bela Vista",
+        "addressLocality": "Porto Alegre",
+        "addressRegion": "RS",
+        "postalCode": "90440-011",
+        "addressCountry": "BR"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Prof. Dr. Arnaldo da Silva Ferreira"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Dr. Aldo Leão Ferreira Filho",
+        "jobTitle": "Head Jurídico"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <!-- Top Bar Seletor de Modo / Protótipo (Para RD e Cliente alternarem facilmente entre o Site Institucional e a LP Oculta 1208) -->
+    <aside class="route-switcher-bar" id="routeSwitcherBar">
+      <div class="container route-switcher-content">
+        <div class="route-info">
+          <span class="pulse-indicator"></span>
+          <span class="route-label">Visualização Ativa:</span>
+          <strong id="activeRouteLabel">Site Institucional (aldoleao.adv.br)</strong>
+        </div>
+        <div class="route-actions">
+          <button id="btnSwitchToSite" class="route-btn active" title="Ir para o Site Institucional">
+            🏛️ Site Institucional
+          </button>
+          <button id="btnSwitchToLP" class="route-btn" title="Ir para a Landing Page oculta 1208">
+            🎯 Landing Page Oculta (/1208/)
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div id="app"></div>
+
+    <!-- Modais Globais (Consulta, Currículo, Download de Livro, Soluções) -->
+    <div id="globalModalContainer"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
