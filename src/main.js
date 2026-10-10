@@ -130,7 +130,7 @@ function renderFloatingAdminBtn() {
     bottom: 20px;
     left: 20px;
     background-color: #1e293b;
-    color: #fff;
+    color: var(--color-text-white);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -319,7 +319,7 @@ function renderSiteInstitucional() {
             <p style="color: var(--color-text-main); font-size: 15px; margin-bottom: 20px;">
               Por meio de uma infraestrutura tecnológica de última geração e de processos 100% digitais, disponibilizamos uma advocacia estratégica moderna, segura e eficiente, proporcionando atendimento virtual com a mesma qualidade, proximidade e excelência do atendimento presencial.
             </p>
-            <p style="color: var(--color-navy); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            <p style="color: var(--color-text-white); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
               EXPERIMENTE A ADVOCACIA ESTRATÉGICA DO FUTURO, HOJE.
             </p>
 
@@ -350,7 +350,7 @@ function renderSiteInstitucional() {
           <div class="presenca-visual">
             <div class="map-badge-card">
               <div class="map-stat-highlight">26 Estados + DF</div>
-              <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #FFF; margin-bottom: 14px;">Advocacia Estratégica Sem Distâncias</h3>
+              <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--color-text-white); margin-bottom: 14px;">Advocacia Estratégica Sem Distâncias</h3>
               <p style="color: #BDD3E8; font-size: 14px; line-height: 1.6; margin-bottom: 24px;">
                 Clientes do agronegócio no Centro-Oeste, investidores no Sudeste, famílias empresárias no Sul e empresas em expansão no Norte e Nordeste contam com a mesma assessoria jurídica centenária.
               </p>
@@ -484,7 +484,7 @@ function renderSiteInstitucional() {
             <span class="eyebrow">DIRETOR JURÍDICO</span>
             <h2 class="section-title">DR. ALDO LEÃO FERREIRA FILHO</h2>
             <div class="gold-divider"></div>
-            <p style="font-size: 1.1rem; color: var(--color-navy); font-weight: 600; margin-bottom: 18px; line-height: 1.6;">
+            <p style="font-size: 1.1rem; color: var(--color-text-white); font-weight: 600; margin-bottom: 18px; line-height: 1.6;">
               Representando a terceira geração do legado jurídico familiar iniciado em 1908, o Dr. Aldo Leão exerce a advocacia estratégica desde 1986.
             </p>
             <p style="color: var(--color-text-main); font-size: 15px; line-height: 1.7; margin-bottom: 20px;">
@@ -654,7 +654,7 @@ function renderSiteInstitucional() {
           </div>
 
           <div>
-            <div style="background: var(--color-navy); padding: 40px; border-radius: 6px; border: 2px solid var(--color-gold); color: #FFF; box-shadow: var(--shadow-lg);">
+            <div style="background: var(--color-navy); padding: 40px; border-radius: 6px; border: 2px solid var(--color-gold); color: var(--color-text-white); box-shadow: var(--shadow-lg);">
               <span style="font-size: 12px; font-weight: 700; color: var(--color-gold); text-transform: uppercase; letter-spacing: 1.5px;">Comparativo Hipotético</span>
               <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin: 10px 0 20px 0;">Economia Comprovada em Números</h3>
               <p style="font-size: 14px; color: #BDD3E8; margin-bottom: 24px; line-height: 1.6;">
@@ -662,7 +662,7 @@ function renderSiteInstitucional() {
               </p>
               <div style="background: rgba(212, 175, 55, 0.15); border: 1px solid var(--color-gold); padding: 18px; border-radius: 4px; text-align: center; margin-bottom: 24px;">
                 <div style="font-size: 12px; color: var(--color-gold); font-weight: 800; text-transform: uppercase;">Redução de Custos</div>
-                <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: #FFF;">55,21% (R$ 164.000,00)</div>
+                <div style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: var(--color-text-white);">55,21% (R$ 164.000,00)</div>
               </div>
               <a href="#1208" class="btn btn-outline-white" style="width: 100%;" onclick="event.preventDefault(); window.location.hash='#1208';">
                 Ver Tabela Comparativa Detalhada
@@ -763,7 +763,7 @@ function renderSiteInstitucional() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
               </div>
               <div class="brand-text">
-                <span class="brand-title" style="color: #FFF; font-size: 1.05rem;">ALDO LEÃO</span>
+                <span class="brand-title" style="color: var(--color-text-white); font-size: 1.05rem;">ALDO LEÃO</span>
                 <span class="brand-subtitle" style="font-size: 10px;">ADVOCACIA ESTRATÉGICA</span>
               </div>
             </div>
@@ -915,8 +915,8 @@ function renderBlogCards() {
 
   if (filtered.length === 0) {
     return `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 50px; background: #FFF; border-radius: 4px;">
-        <p style="font-size: 16px; color: var(--color-navy); font-weight: 600;">Nenhuma publicação encontrada para os critérios selecionados.</p>
+      <div style="grid-column: 1 / -1; text-align: center; padding: 50px; background: var(--color-midnight-card); border-radius: 4px;">
+        <p style="font-size: 16px; color: var(--color-text-white); font-weight: 600;">Nenhuma publicação encontrada para os critérios selecionados.</p>
         <button class="btn btn-outline-gold btn-sm" style="margin-top: 14px;" id="btnResetBlogFilters">Limpar Filtros</button>
       </div>
     `;
@@ -1148,7 +1148,7 @@ function renderLandingPage() {
             <div class="savings-simulator-box">
               <div class="sim-slider-label">Simule o valor estimado do patrimônio da sua família:</div>
               <input type="range" min="1000000" max="15000000" step="500000" value="1500000" class="sim-slider" id="patrimonioRange">
-              <div style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--color-navy); font-weight: 800;" id="patrimonioLabel">
+              <div style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--color-text-white); font-weight: 800;" id="patrimonioLabel">
                 R$ 1.500.000,00
               </div>
 
@@ -1468,7 +1468,7 @@ function attachInstitucionalEvents() {
         <p style="margin-bottom: 14px;">
           Graduado em Direito pela tradicional Pontifícia Universidade Católica do Rio Grande do Sul (PUC-RS), possui sólida atuação multidisciplinar e quatro décadas de vivência como Advogado Estratégico, Gestor Jurídico Corporativo e Patrimonial.
         </p>
-        <h4 style="font-family: var(--font-heading); color: var(--color-navy); font-size: 1.1rem; margin: 20px 0 10px 0;">Trajetória Institucional e Pública:</h4>
+        <h4 style="font-family: var(--font-heading); color: var(--color-text-white); font-size: 1.1rem; margin: 20px 0 10px 0;">Trajetória Institucional e Pública:</h4>
         <ul style="padding-left: 20px; margin-bottom: 20px;">
           <li>Procurador Municipal de 20 Municípios no Rio Grande do Sul;</li>
           <li>Procurador do Banco do Brasil S/A;</li>
@@ -1476,7 +1476,7 @@ function attachInstitucionalEvents() {
           <li>Atuação perante comissões especializadas da Ordem dos Advogados do Brasil (OAB/RS);</li>
           <li>Professor Universitário na Unisinos e orientador de monografias jurídicas.</li>
         </ul>
-        <h4 style="font-family: var(--font-heading); color: var(--color-navy); font-size: 1.1rem; margin: 20px 0 10px 0;">Literatura Jurídica:</h4>
+        <h4 style="font-family: var(--font-heading); color: var(--color-text-white); font-size: 1.1rem; margin: 20px 0 10px 0;">Literatura Jurídica:</h4>
         <p style="margin-bottom: 20px;">
           Autor de extensa produção doutrinária com mais de uma centena de artigos publicados em periódicos especializados e autor de 6 livros digitais de referência em planejamento sucessório e proteção de ativos.
         </p>
@@ -1509,7 +1509,7 @@ function attachInstitucionalEvents() {
         if (area) {
           openModal(area.title, `
             <div style="font-size: 15px; line-height: 1.7; color: var(--color-text-main);">
-              <h4 style="font-family: var(--font-heading); color: var(--color-navy); font-size: 1.15rem; margin-bottom: 12px;">${area.subtitle}</h4>
+              <h4 style="font-family: var(--font-heading); color: var(--color-text-white); font-size: 1.15rem; margin-bottom: 12px;">${area.subtitle}</h4>
               <p style="margin-bottom: 20px;">${area.description}</p>
               <div style="background: var(--color-navy-soft); padding: 16px; border-radius: 4px; margin-bottom: 24px; border-left: 3px solid var(--color-navy);">
                 <strong>Atendimento Digital Especializado:</strong> O escritório conta com núcleos setoriais para análise documental, due diligence preventiva e estruturação estratégica.
